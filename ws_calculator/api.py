@@ -13,28 +13,88 @@ def home():
 
 
 #Operación suma
-#http://localhost:5000/ws_calculator/v1/resources/operation/sum
+#http://localhost:5000/ws_calculator/v1/resources/operation/sum?n[0]=4&n[1]=2
 @app.route('/ws_calculator/v1/resources/operation/sum', methods=['GET'])
 def api_sum():
-    return 'operacion sumar'
+    if request.args:
+        # We have our query string nicely serialized as a Python dictionary
+        args = request.args
+        resultado = 0
+
+        # We'll create a string to display the parameters & values
+        for k, v in request.args.items():
+            try:
+                resultado += float(v)
+            except:
+                resultado += 0
+        return str(resultado), 200
+    else:
+        return "No se recibieron parametros", 400 
 
 #Operación resta
-#http://localhost:5000/ws_calculator/v1/resources/operation/res
+#http://localhost:5000/ws_calculator/v1/resources/operation/res?n[0]=4&n[1]=2
 @app.route('/ws_calculator/v1/resources/operation/res', methods=['GET'])
 def api_res():
-    return 'operacion restar'
+    if request.args:
+        # We have our query string nicely serialized as a Python dictionary
+        args = request.args
+        resultado = 0
+
+        # We'll create a string to display the parameters & values
+        for k, v in request.args.items():
+            try:
+                resultado -= float(v)
+            except:
+                resultado -= 0
+        return str(resultado), 200
+    else:
+        return "No se recibieron parametros", 400 
 
 #Operación multiplicacion
-#http://localhost:5000/ws_calculator/v1/resources/operation/mul
+#http://localhost:5000/ws_calculator/v1/resources/operation/mul?n[0]=4&n[1]=2
 @app.route('/ws_calculator/v1/resources/operation/mul', methods=['GET'])
 def api_mul():
-    return 'operacion multiplicar'
+    if request.args:
+        # We have our query string nicely serialized as a Python dictionary
+        args = request.args
+        resultado = 0
+        index = 0
+        # We'll create a string to display the parameters & values
+        for k, v in request.args.items():
+            try:
+                if index == 0:
+                    resultado = float(v)
+                else:
+                    resultado *= float(v)
+                index+=1
+            except:
+                resultado = 0
+        return str(resultado), 200
+    else:
+        return "No se recibieron parametros", 400 
 
 #Operación división
-#http://localhost:5000/ws_calculator/v1/resources/operation/div
+#http://localhost:5000/ws_calculator/v1/resources/operation/div?n[0]=4&n[1]=2
 @app.route('/ws_calculator/v1/resources/operation/div', methods=['GET'])
 def api_div():
-    return 'operacion dividir'
+    if request.args:
+        # We have our query string nicely serialized as a Python dictionary
+        args = request.args
+        resultado = 0
+        index = 0
+        # We'll create a string to display the parameters & values
+        for k, v in request.args.items():
+            try:
+                if index == 0:
+                    resultado = float(v)
+                else:
+                    resultado /= float(v)
+                index+=1
+            except:
+                resultado = 0
+        return str(resultado), 200
+    else:
+        return "No se recibieron parametros", 400 
 
 
 app.run()
