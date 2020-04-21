@@ -6451,30 +6451,24 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\egonzalez\\.nuget\\packages\\": {},
-    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
+    "/Users/LSierra/.nuget/packages/": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\FlaskMS\\OcelotApiGetway\\OcelotApiGetway\\OcelotApiGetway.csproj",
+      "projectUniqueName": "/Users/LSierra/Documents/LSierra/FlaskMS/OcelotApiGetway/OcelotApiGetway/OcelotApiGetway.csproj",
       "projectName": "OcelotApiGetway",
-      "projectPath": "D:\\FlaskMS\\OcelotApiGetway\\OcelotApiGetway\\OcelotApiGetway.csproj",
-      "packagesPath": "C:\\Users\\egonzalez\\.nuget\\packages\\",
-      "outputPath": "D:\\FlaskMS\\OcelotApiGetway\\OcelotApiGetway\\obj\\",
+      "projectPath": "/Users/LSierra/Documents/LSierra/FlaskMS/OcelotApiGetway/OcelotApiGetway/OcelotApiGetway.csproj",
+      "packagesPath": "/Users/LSierra/.nuget/packages/",
+      "outputPath": "/Users/LSierra/Documents/LSierra/FlaskMS/OcelotApiGetway/OcelotApiGetway/obj/",
       "projectStyle": "PackageReference",
-      "fallbackFolders": [
-        "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
-      ],
       "configFilePaths": [
-        "C:\\Users\\egonzalez\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        "/Users/LSierra/.nuget/NuGet/NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "netcoreapp3.1"
       ],
       "sources": {
-        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
@@ -6522,7 +6516,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.101\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/3.1.201/RuntimeIdentifierGraph.json"
       }
     }
   }

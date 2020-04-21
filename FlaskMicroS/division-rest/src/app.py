@@ -17,17 +17,20 @@ def dividir_numeros():
         for pair in numbers_list:
             nextdict = pair
             for numberValue, number_list in nextdict.items():
-                if int(nextdict[numberValue]) == 0:
-                    response = {  
-                        "result": "División indeterminada"
-                    }
+                try:
+                    if int(nextdict[numberValue]) == 0:
+                        response = {  
+                            "result": "División indeterminada"
+                        }
 
-                    return jsonify(response)
+                        return jsonify(response)
 
-                if result != 0:
-                    result = result / int(nextdict[numberValue])
-                else:
-                    result = int(nextdict[numberValue])
+                    if result != 0:
+                        result = result / int(nextdict[numberValue])
+                    else:
+                        result = int(nextdict[numberValue])
+                except:
+                    abort(404)
 
     response = {  
         "result": result

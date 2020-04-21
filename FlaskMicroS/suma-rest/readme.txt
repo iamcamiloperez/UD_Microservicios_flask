@@ -1,6 +1,16 @@
 Para ejecutar el entorno phyton 
     --> D:\FlaskMS\suma-rest\venv\Scripts>activate.bat
 
+En Mac, Para crear el entorno phyton3 primera vez 
+    --> python3 -m venv venv 
+
+En Mac, Para activar el entorno phyton
+    --> . venv/bin/activate
+
+En Mac, instalar flask
+    --> pip install flask
+
+
 Para ejecutar la app
     --> (venv) D:\FlaskMS\suma-rest>python src/app.py
 
@@ -29,3 +39,11 @@ Ver contenedores en ejecución
 Detener docker 
     --> docker stop [CONTAINER ID]
     --> ejemplo -- docker stop 27db59de1c69 (puede ser los primeros 3 caracteres)
+
+Compilar OcelotApiGetway
+    --> cd OcelotApiGetway
+    --> dotnet build OcelotApiGetway.sln
+
+Ejecutar OcelotApiGetway
+    --> cd OcelotApiGetway
+    --> dotnet run OcelotApiGetway.csproj

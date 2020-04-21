@@ -17,7 +17,10 @@ def multiplicar_numeros():
         for pair in numbers_list:
             nextdict = pair
             for numberValue, number_list in nextdict.items():
-                result = result * int(nextdict[numberValue])
+                try:
+                    result = result * int(nextdict[numberValue])
+                except:
+                    abort(404)
 
     response = {  
         "result": result

@@ -17,10 +17,13 @@ def restar_numeros():
         for pair in numbers_list:
             nextdict = pair
             for numberValue, number_list in nextdict.items():
-                if result != 0:
-                    result = result - int(nextdict[numberValue])
-                else:
-                    result = int(nextdict[numberValue])
+                try:
+                    if result != 0:
+                        result = result - int(nextdict[numberValue])
+                    else:
+                        result = int(nextdict[numberValue])
+                except:
+                    abort(404)
 
     response = {  
         "result": result

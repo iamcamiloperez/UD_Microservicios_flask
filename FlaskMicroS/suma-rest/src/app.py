@@ -5,7 +5,7 @@ app = Flask(__name__)
 
 @app.route('/api/sumar', methods=['GET'])
 def ping():
-    return jsonify({"response": "servicio sumar"})
+    return jsonify({"response": "servicio sumar "})
 
 @app.route('/api/users')
 def userHandler():
@@ -23,8 +23,11 @@ def sumar_numeros():
             nextdict = pair
             for numberValue, number_list in nextdict.items():
                 #print('print each: ' + str(numberValue)+ '->' + str(number_list))
-                #address each one                
-                result = result + int(nextdict[numberValue])
+                #address each one   
+                try:             
+                    result = result + int(nextdict[numberValue])
+                except:
+                    abort(404)
 
     response = {  
         "result": result
