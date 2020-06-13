@@ -10,6 +10,11 @@ En Mac, Para activar el entorno phyton
 En Mac, instalar flask
     --> pip install flask
 
+En Mac, instalar behave
+    --> pip install behave
+
+En Mac, instalar requests
+    --> pip install requests
 
 Para ejecutar la app
     --> (venv) D:\FlaskMS\suma-rest>python src/app.py
